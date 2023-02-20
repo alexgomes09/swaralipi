@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/iv_lyrics"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:adjustViewBounds="true"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            tools:src="@drawable/aamar_e_duti" />-->
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_lyrics"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:actualImageScaleType="centerInside"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:fadeDuration="0"
+            app:placeholderImage="@drawable/drawable_error"
+            app:failureImage="@drawable/drawable_error"
+            tools:placeholderImage="@drawable/aamar_e_duti"
+            app:roundingBorderWidth="2dp" />
+
+        <View android:layout_width="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_lyrics"
+            android:background="@android:color/black"
+            android:layout_marginTop="40dp"
+            android:layout_height="1dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:fontFamily="@font/sf_compact_text_medium"
+            android:paddingHorizontal="16dp"
+            android:text="Name:"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_lyrics" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lyrics_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_compact_text_regular"
+            android:paddingEnd="16dp"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv1"
+            app:layout_constraintTop_toBottomOf="@id/iv_lyrics"
+            app:layout_constraintTop_toTopOf="@id/tv1"
+            tools:text="Amar E duti chokh: sdfjsdj ksj  djfh kjsdjkf dfd" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/sf_compact_text_medium"
+            android:paddingHorizontal="16dp"
+            android:text="Singer:"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lyrics_name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/singer_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_compact_text_regular"
+            android:paddingEnd="16dp"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv1"
+            tools:text="Jimy Gomes" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/sf_compact_text_medium"
+            android:paddingHorizontal="16dp"
+            android:text="Author:"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/singer_name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/author_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_compact_text_regular"
+            android:paddingEnd="16dp"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv1"
+            tools:text="Alex Gomes" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/sf_compact_text_medium"
+            android:paddingHorizontal="16dp"
+            android:text="Type:"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/author_name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lyrics_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_compact_text_regular"
+            android:paddingEnd="16dp"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv1"
+            tools:text="Polligiti" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
