@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Swaralipi</title>
-</head>
-<body>
-
-  <img src="./swaralipi.svg" style="margin:0 auto; display:block"/>
-<pre style="width:85vw;margin: 0 auto;font-size:6px; text-align: center;">
+    <link rel="icon" href="./swaralipi.svg" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  </head>
+  <body class="container-fluid">
+    <img src="./swaralipi.svg" style="margin: 0 auto; display: none" />
+    <pre
+      style="
+        width: 85vw;
+        margin: 0 auto;
+        font-size: 6px;
+        text-align: center;
+        display: none;
+      "
+    >¬
                                                                                                                                                      
                                                                                                           lllllll   iiii                       iiii  
                                                                                                           l:::::l  i::::i                     i::::i 
@@ -32,7 +41,68 @@ s::::::::::::::s       w:::::w         w:::::w       a:::::aaaa::::::a r:::::r  
                                                                                                                          p:::::::p                   
                                                                                                                          ppppppppp                   
 
-</pre>
-<br>
-</body>
+</pre
+    >
+    <br />
+
+    <input id="file-input" type="file" multiple />
+    
+    <br />
+    <br />
+    
+    <table class="table table-bordered table-highlight">
+      <thead>
+        <th>File name</th>
+        <th>Singer</th>
+        <th>Author</th>
+        <th>Category</th>
+      </thead>
+      <tbody class="table-secondary">
+        
+      </tbody>
+    </table>
+
+
+    <button class="btn btn-primary" type="button" onclick="upload(this)">Upload</button>
+
+
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1.24.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/exifr/dist/full.umd.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/main.js" type="text/javascript"></script>
+      <!-- // //Bucket Configurations
+      // var bucketName = "swaralipi";
+      // var bucketRegion = "us-east-2";
+      // var IdentityPoolId = "Regions.US_EAST_1";
+
+      // AWS.config.update({
+      //   region: bucketRegion,
+      //   credentials: new AWS.CognitoIdentityCredentials({
+      //     IdentityPoolId: IdentityPoolId,
+      //   }),
+      // });
+
+      // var s3 = new AWS.S3({
+      //   apiVersion: "2006-03-01",
+      //   params: { Bucket: bucketName },
+      // });
+
+
+        // s3.upload(
+        //   {
+        //     Key: filePath,
+        //     Body: file,
+        //     ACL: "public-read",
+        //   },
+        //   function (err, data) {
+        //     if (err) {
+        //       reject("error");
+        //     }
+        //     alert("Successfully Uploaded!");
+        //   }
+        // ).on("httpUploadProgress", function (progress) {
+        //   var uploaded = parseInt((progress.loaded * 100) / progress.total);
+        //   $("progress").attr("value", uploaded);
+        // }); -->
+  </body>
 </html>
