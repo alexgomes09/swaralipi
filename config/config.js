@@ -8,4 +8,3 @@ export default {
     region: "us-east-1",
   },
 };
-w
